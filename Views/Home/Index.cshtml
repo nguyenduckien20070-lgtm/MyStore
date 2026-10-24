@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Store - Trang Quản Trị (Admin Site)</title>
+    <!-- Thư viện Bootstrap 3 CSS chuẩn theo mẫu bài giảng -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Thư viện Google Charts cho trang Home -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER: _AdminLayout.cshtml -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#adminNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" onclick="navigate('home')">My Store</a>
+            </div>
+            <div class="collapse navbar-collapse" id="adminNavbar">
+                <ul class="nav navbar-nav">
+                    <li id="nav-home"><a href="#" onclick="navigate('home')">Home</a></li>
+                    <li id="nav-categories"><a href="#" onclick="navigate('categories')">Danh mục</a></li>
+                    <li id="nav-products" class="active"><a href="#" onclick="navigate('products')">Sản phẩm</a></li>
+                    <li id="nav-customers"><a href="#" onclick="navigate('customers')">Khách hàng</a></li>
+                    <li id="nav-orders"><a href="#" onclick="navigate('orders')">Đơn hàng</a></li>
+                    <li id="nav-accounts"><a href="#" onclick="navigate('accounts')">Tài khoản</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- NỘI DUNG CHÍNH (RenderBody) -->
+    <div class="container body-content">
+        <div id="app-view"></div>
+
+        <hr />
+        <!-- FOOTER: _AdminLayout.cshtml -->
+        <footer>
+            <p>&copy; 2024 - Tên ứng dụng (My Store)</p>
+            <h4>Contact</h4>
+            <p>Tên các thành viên trong nhóm</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
